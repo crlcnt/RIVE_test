@@ -1,0 +1,18 @@
+<canvas id="rive-canvas" width="1190" height="841" style="width:100%; height:auto; display:block; background:transparent;"></canvas>
+
+<!-- Importa il runtime ufficiale di Rive -->
+<script src="https://unpkg.com/@rive-app/webgl2@latest"></script>
+
+<script>
+  const r = new rive.Rive({
+    src: "https://cdn.jsdelivr.net/gh/crlcnt/RIVE_test@main/tesi_tavola4.riv",
+    canvas: document.getElementById("rive-canvas"),
+    autoplay: true,
+    autoBind: true,
+    stateMachine: "MAIN - State Machine",
+    onLoad: () => {
+      // Mantiene l'animazione nitida su schermi Retina e alta definizione
+      r.resizeDrawingSurfaceToCanvas();
+    },
+  });
+</script>
